@@ -6,4 +6,4 @@
 
 use \Magento\Framework\Component\ComponentRegistrar;
 
-ComponentRegistrar::register(ComponentRegistrar::THEME, 'frontend/Test/test', __DIR__);
+ComponentRegistrar::register(ComponentRegistrar::THEME, 'frontend/Candleaf/main_theme', __DIR__);

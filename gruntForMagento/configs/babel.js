@@ -33,7 +33,7 @@ for(let name in themes) {
                 compact: false,
                 minified: false
             },
-            files: 'app/design/frontend/Test/test/**/js/**/source/**/*.js'
+            files: 'app/design/frontend/Candleaf/main_theme/**/js/**/source/**/*.js'
         };
     }
 }
@@ -45,7 +45,7 @@ themeOptions['appCode'] = {
         compact: false,
         minified: false
     },
-    files: 'app/code/Test/**/view/frontend/web/js/**/source/**/*.js'
+    files: 'app/code/Candleaf/**/view/frontend/web/js/**/source/**/*.js'
 };
 
 module.exports = Object.assign(babelOptions, themeOptions);

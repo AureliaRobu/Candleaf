@@ -53,7 +53,7 @@ const themes = {
     site: {
         grunt: true,
         appPath: 'frontend',
-        themePath: 'Test/test',
+        themePath: 'Candleaf/main_theme',
         dev_url: 'learn.loc',
         locale: 'en_US',
         stylesheets: [
