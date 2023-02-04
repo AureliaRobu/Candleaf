@@ -5,9 +5,42 @@
  * See COPYING.txt for license details.
  */
 -->
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="header.panel.wrapper" remove="true"/>
         <referenceBlock name="top.search" remove="true"/>
+        <referenceBlock name="page.main.title" remove="true"/>
+        <referenceBlock name="form.subscribe" remove="true"/>
+        <referenceBlock name="report.bugs" remove="true"/>
+        <referenceBlock name="footer_links" remove="true"/>
+        <referenceBlock name="store.links" remove="true"/>
+                <move element="copyright" destination="before.body.end" as="copyright" after="-"/>
+        <referenceContainer name="footer">
+            <container name="logo-container" htmlTag="div"  htmlClass="logo-footer" before="-"/>
+            <referenceContainer name="logo-container">
+                <block class="Magento\Theme\Block\Html\Header\Logo" name="logo-footer"  before="-">
+                    <arguments>
+                        <argument name="logo_file" xsi:type="string">images/footer.svg</argument>
+                        <argument name="logoPathResolver" xsi:type="object">
+                            Magento\Theme\ViewModel\Block\Html\Header\LogoPathResolver
+                        </argument>
+                        <argument name="logo_size_resolver" xsi:type="object">
+                            Magento\Theme\ViewModel\Block\Html\Header\LogoSizeResolver
+                        </argument>
+                    </arguments>
+
+                </block>
+                <block name="logo-footer-text" class="Magento\Framework\View\Element\Text">
+                    <arguments>
+                        <argument name="text" xsi:type="string">Your natural candle made for your home and for your wellness.</argument>
+                    </arguments>
+                </block>
+
+            </referenceContainer>
+
+            <block name="links-footer" template="Magento_Theme::links.phtml" after="-" />
+        </referenceContainer>
+
     </body>
 </page>
