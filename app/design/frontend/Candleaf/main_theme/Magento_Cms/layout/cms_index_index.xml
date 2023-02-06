@@ -7,8 +7,8 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <referenceContainer name="top.container">
-         <block name="hero" template="Magento_Cms::hero.phtml" />
+        <referenceContainer name="page.wrapper">
+         <block name="hero" template="Magento_Cms::hero.phtml" after="page.top"  />
         </referenceContainer>
     </body>
 </page>
