@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="mage/gallery/gallery.css"/>
+    </head>
+    <update handle="catalog_product_opengraph"/>
+    <update handle="page_calendar"/>
+    <body>
+        <!--        Remove unnecessary blocks-->
+        <referenceBlock name="product.reviews.wrapper" remove="true"/>
+        <referenceBlock name="breadcrumbs" remove="true"/>
+        <referenceBlock name="product.info.simple" remove="true"/>
+        <referenceContainer name="product.info.stock.sku" remove="true"/>
+        <referenceContainer name="product.info.social" remove="true"/>
+        <referenceBlock name="product.info.review" remove="true"/>
+
+        <move element="page.main.title" destination="product.info.main" before="-"/>
+        <move element="product.info.details.after.wrapper" destination="product.info.main" after="-"/>
+
+
+        <!--        Product add and delivery CMS block-->
+        <referenceContainer name="product.info.media">
+            <block class="Magento\Cms\Block\BlockByIdentifier">
+                <arguments>
+                    <argument name="identifier" xsi:type="string">
+                        products-add
+                    </argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

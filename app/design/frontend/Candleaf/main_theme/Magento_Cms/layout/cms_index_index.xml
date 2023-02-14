@@ -7,8 +7,7 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <referenceContainer name="page.wrapper">
-         <block name="hero" template="Magento_Cms::hero.phtml" after="page.top"  />
-        </referenceContainer>
+        <move element="columns" destination="page.wrapper" before="main.content"/>
+        <referenceBlock name="page.main.title" remove="true"/>
     </body>
 </page>

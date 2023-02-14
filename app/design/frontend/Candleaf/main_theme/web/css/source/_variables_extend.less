@@ -1,10 +1,16 @@
 //
 //  Color variables
 //  _____________________________________________
-@theme__color__primary: #56B280;
+@import "variables/_colors_extend";
+@import "variables/_buttons_extend";
+@import "variables/_components_extend";
+@import "variables/_forms_extend";
+@import "variables/_icons_extend";
+@import "variables/_navigation_extend";
 @footer__background-color: #272727;
 
-@button__hover__background:#FFFFFF;
+
+@product__image__background: rgb(247, 248, 250);
 
 //
 //  Typography variables
@@ -16,57 +22,9 @@
 
 //  Font families
 @font-family__base: 'Poppins-500', sans-serif;
-
-//
-//  Buttons
-//  ---------------------------------------------
-
-//  Font style
-@button__font-family: 'Roboto-400',sans-serif;
-@button__font-size: @font-size__xl;
-@button__font-weight: @font-weight__regular;
-@button__line-height: @font-size__xl + 3;
-@button__margin: 0;
-@button__padding: 8px 44px; // is set up to false when buttons don't depend on side paddings or have fixed width
-@button__width: false; // is set up to false when buttons depend on side paddings or to fixed value when needed
-
-//  Display settings
-@button__display: inline-block;
-@button__cursor: pointer;
-@button__border-radius: 4px;
-
-@button__disabled__opacity: 1;
+@font-family__secondary:'Roboto-500',sans-serif;
 
 
-
-//  Primary button
-@button-primary__font-family: @button__font-family;
-@button-primary__font-size: @button__font-size;
-@button-primary__font-weight: @button__font-weight;
-@button-primary__line-height: false;
-@button-primary__width: false;
-@button-primary__margin: false;
-@button-primary__padding: @button__padding;
-@button-primary__gradient: false;
-@button-primary__gradient-direction: false;
-
-@button-primary__background: @theme__color__primary;
-@button-primary__border: 1px solid @theme__color__primary;
-@button-primary__color: @color-white;
-@button-primary__gradient-color-start: false;
-@button-primary__gradient-color-end: false;
-
-@button-primary__hover__background:@color-white ;
-@button-primary__hover__border: 1px solid @theme__color__primary;
-@button-primary__hover__color: @theme__color__primary;
-@button-primary__hover__gradient-color-start: false;
-@button-primary__hover__gradient-color-end: false;
-
-@button-primary__active__background: @button-primary__hover__background;
-@button-primary__active__border: @button-primary__hover__border;
-@button-primary__active__color: @button-primary__color;
-@button-primary__active__gradient-color-start: false;
-@button-primary__active__gradient-color-end: false;
 
 //
 //  Navigation
