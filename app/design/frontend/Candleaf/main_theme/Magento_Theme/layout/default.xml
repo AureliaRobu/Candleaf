@@ -9,8 +9,17 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="header-wrapper">
+            <container name="header-icons" htmlTag="div" htmlClass="header-icons" after="logo"/>
+        </referenceContainer>
+        <referenceContainer name="header-icons">
             <block name="customer" template="Magento_Customer::header-dropdown.phtml"  before="minicart"/>
         </referenceContainer>
+        <move element="minicart" destination="header-icons" after="-"/>
+        <referenceBlock name="store.menu">
+            <arguments>
+                        <argument name="title" translate="true" xsi:type="string"/>
+                    </arguments>
+        </referenceBlock>
         <referenceContainer name="header.panel.wrapper" remove="true"/>
         <referenceBlock name="top.search" remove="true"/>
         <referenceBlock name="form.subscribe" remove="true"/>
