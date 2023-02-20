@@ -1,10 +1,135 @@
+/***************
+Hero
+****************/
+& when (@media-common = true) {
+    .hero {
+        &-content {
+            color: @color-gray-dark1;
+        }
+    }
+}
+
+//Mobile
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m){
+    .hero {
+        background-image: url("../images/hero-bg-image-mobile.jpg");
+        background-color: #cccccc;
+        height: 780px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &-content {
+            box-sizing: border-box;
+            background: rgba(247, 248, 250, 0.8);
+            backdrop-filter: blur(12px);
+            border-radius: 2px;
+            width: 90%;
+            height: 370px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 1rem;
+            .hero-description{
+                margin-bottom: 3.5rem;
+                padding: 0 2rem;
+                text-align: center;
+            }
+        }
+
+        button {
+            .lib-button-primary();
+        }
+
+        &-leaf, &-heading {
+            font-size: 4rem;
+            text-align: center;
+        }
+    }
+}
+
+//Desktop
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m){
+    .hero {
+        background-image: url("../images/hero-bg-image-desktop.jpg");
+        background-color: #cccccc;
+        height: 780px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &-content {
+            box-sizing: border-box;
+            background: rgba(247, 248, 250, 0.8);
+            backdrop-filter: blur(12px);
+            border-radius: 2px;
+            width: 730px;
+            height: 349px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 11rem;
+            .hero-heading{
+                margin-bottom: 1rem;
+            }
+            .hero-description{
+                text-align: center;
+                margin-bottom: 5rem;
+            }
+        }
+
+        button {
+            .lib-button-primary();
+        }
+
+        &-leaf, &-heading {
+            font-size: 4rem;
+            text-align: center;
+        }
+
+    }
+}
 
 
 /***************
 Products section
 ****************/
+
+//Common
+& when (@media-common = true){
+    .products{
+        h1{
+            color: @color-gray-dark2;
+        }
+        p{
+            color:@color-gray-dark4;
+            text-align: center;
+        }
+        .product-item-details{
+            box-sizing: border-box;
+            color: @color-gray-dark3;
+            padding: 0.7rem 1.7rem;
+            .price-box{
+                margin: 0 2.6rem 1.2rem 0;
+            }
+        }
+    }
+}
 //Mobile
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m){
+    .products{
+        margin:50px 20px 70px 20px;
+
+    }
     .product-items {
         .product-item-info {
             margin: 0 auto;
@@ -17,6 +142,7 @@ Products section
                 z-index: 99;
                 background-color: @color-white;
                 width: 255px;
+                height: 70px;
             }
         }
 
@@ -27,6 +153,138 @@ Products section
     }
 }
 
+//Desktop
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m){
+  .products{
+      padding: 2rem;
+      #products-btn{
+          display: none;
+      }
+  }
+}
+
+/***************
+Learn more section
+****************/
+
+& when (@media-common = true) {
+    .learn-more {
+        background-color: @color-white-pinkish;
+        padding: 12rem 2rem 4rem 2rem;
+        h1{
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            span {
+                color: @theme__color__primary;
+
+            }
+        }
+        ul {
+            list-style: none;
+            .checkbox{
+                display: inline-block;
+                margin-right: 1rem;
+            }
+        }
+    }
+}
+
+//Mobile
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m){
+    .learn-more{
+        padding: 12rem 2rem 4rem 2rem;
+
+    }
+}
+
+//Desktop
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m){
+    .learn-more-container{
+        align-items: flex-start;
+        position: relative;
+        .learn-more-img{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+}
+
+/***************
+Testimonials section
+****************/
+
+& when (@media-common = true) {
+    .testimonials {
+        background-color: rgba(86, 178, 128, 0.1);
+         h1{
+            color: @color-gray-dark2;
+             margin-bottom: 1.5rem;
+        }
+        .description{
+            color:@color-gray-dark4;
+        }
+
+        .pagebuilder-column.testimonial.slick-slide {
+            height: 295px;
+            padding: 1rem 3rem;
+            background-color: @color-white;
+            box-shadow: 0px 4px 24px rgba(139, 167, 178, 0.16);
+            border-radius: 6px;
+            margin-top: 5rem;
+            justify-content: center;
+            align-items: center;
+            .stars{
+                margin-bottom: 1.5rem;
+                p{
+                display: flex;
+            }
+            }
+            .quote{
+                color: @color-gray-dark3;
+            }
+            .name{
+                color: @color-gray-medium4;
+            }
+
+        }
+    }
+
+}
+
+//Mobile
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m){
+    .testimonials{
+        padding: 9rem 1.5rem 12rem 1.5rem;
+    }
+}
+
+/***************
+Popular section
+****************/
+& when (@media-common = true){
+    .pager{
+        display: none;
+    }
+}
+//Mobile
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m){
+    .popular{
+        padding: 3rem 1.5rem 6rem 1.5rem;
+         h1{
+            color: @color-gray-dark2;
+             margin-bottom: 1.5rem;
+        }
+        p{
+            color:@color-gray-dark4;
+        }
+    }
+}
 
 /***************
 Footer
@@ -108,124 +366,7 @@ Footer
 
 }
 
-/***************
-Hero
-****************/
-& when (@media-common = true) {
-    .hero {
-        &-content {
-            color: #1D252C;;
-        }
-    }
-}
 
-//Mobile
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m){
-    .hero {
-        background-image: url("../images/hero-bg-image-mobile.jpg");
-        background-color: #cccccc;
-        height: 780px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: flex;
-        align-items: center;
-        justify-content: center;
 
-        &-content {
-            background: rgba(247, 248, 250, 0.8);
-            backdrop-filter: blur(12px);
-            border-radius: 2px;
-            width: 90%;
-            height: 40%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 4rem 1rem;
-        }
 
-        button {
-            .lib-button-primary();
-        }
 
-        &-leaf, &-heading {
-            font-size: 4rem;
-            text-align: center;
-        }
-    }
-}
-
-//Desktop
-
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m){
-    .hero {
-        background-image: url("../images/hero-bg-image-desktop.jpg");
-        background-color: #cccccc;
-        height: 780px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        &-content {
-            background: rgba(247, 248, 250, 0.8);
-            backdrop-filter: blur(12px);
-            border-radius: 2px;
-            width: 730px;
-            height: 349px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem 5rem;
-        }
-
-        button {
-            .lib-button-primary();
-        }
-
-        &-leaf, &-heading {
-            font-size: 4rem;
-            text-align: center;
-        }
-
-    }
-}
-
-/***************
-Learn more section
-****************/
-
-& when (@media-common = true) {
-    .learn-more {
-        background-color: #F7F8FA;
-
-        p span {
-            color: @theme__color__primary;
-        }
-
-        ul {
-            list-style: none;
-        }
-    }
-}
-
-/***************
-Testimonials section
-****************/
-
-& when (@media-common = true) {
-    .testimonials {
-        background-color: rgba(86, 178, 128, 0.1);
-
-        .pagebuilder-column.testimonial {
-            background-color: @color-white;
-            box-shadow: 0px 4px 24px rgba(139, 167, 178, 0.16);
-            border-radius: 6px;
-        }
-    }
-
-}

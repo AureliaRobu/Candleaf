@@ -7,6 +7,11 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="css/vendor/slick.css" />
+        <css src="css/vendor/slick-theme.css" />
+    </head>
+
     <body>
         <referenceContainer name="header-wrapper">
             <container name="header-icons" htmlTag="div" htmlClass="header-icons" after="logo"/>
