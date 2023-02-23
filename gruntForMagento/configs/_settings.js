@@ -28,7 +28,7 @@ module.exports = {
     defaultTheme: 'site',
     defaultPackage: 'gruntForMagento',
     appRoot: '../../',
-    vendor: 'Test',
+    vendor: 'Candleaf',
     assetDir: 'skin',
     appDir: 'app',
     codeDir: 'code',
