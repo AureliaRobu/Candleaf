@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2a847eb1bfaae586f7a483489eca318e",
+    "content-hash": "76e21526a9c38b87e9a77ced7e7d602b",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -1329,6 +1329,55 @@
                 "source": "https://github.com/DASPRiD/Enum/tree/1.0.3"
             },
             "time": "2020-10-02T16:03:48+00:00"
+        },
+        {
+            "name": "devbera/module-cmslinktomenu",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/devamitbera/magento2-add-cms-pages-to-menu.git",
+                "reference": "5f8ff270372edb8d767193cb94182ec178bbd1a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/devamitbera/magento2-add-cms-pages-to-menu/zipball/5f8ff270372edb8d767193cb94182ec178bbd1a1",
+                "reference": "5f8ff270372edb8d767193cb94182ec178bbd1a1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.2"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "DevBera\\CmsLinkToMenu\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Amit Bera",
+                    "email": "dev.amitbera@gmail.com",
+                    "homepage": "https://www.amitbera.com"
+                }
+            ],
+            "description": "Magento2 add a cms page link / custom link  to menu",
+            "keywords": [
+                "Magento2 add a cms page link to menu",
+                "Magento2 add a custom link to menu",
+                "Magento2 add a external links to menu"
+            ],
+            "support": {
+                "issues": "https://github.com/devamitbera/magento2-add-cms-pages-to-menu/issues",
+                "source": "https://github.com/devamitbera/magento2-add-cms-pages-to-menu/tree/1.5.0"
+            },
+            "time": "2020-04-26T07:11:26+00:00"
         },
         {
             "name": "elasticsearch/elasticsearch",

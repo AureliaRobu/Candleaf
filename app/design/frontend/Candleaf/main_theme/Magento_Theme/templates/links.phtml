@@ -4,9 +4,9 @@
             <h3 class="title"><?= $block->escapeHtml(__('Discovery')) ?></h3>
         </div>
         <ul>
-            <li><a href="#"><?= $block->escapeHtml(__('New season')) ?></a></li>
-            <li><a href="#"><?= $block->escapeHtml(__('Most searched')) ?></a></li>
-            <li><a href="#"><?= $block->escapeHtml(__('Most sold')) ?></a></li>
+            <li><a href="<?= $escaper->escapeUrl('http://krysa.magento2.com/discovery/new-season.html') ?>"><?= $block->escapeHtml(__('New season')) ?></a></li>
+            <li><a href="<?= $escaper->escapeUrl('http://krysa.magento2.com/discovery/most-searched.html') ?>"><?= $block->escapeHtml(__('Most searched')) ?></a></li>
+            <li><a href="<?= $escaper->escapeUrl('http://krysa.magento2.com/discovery/most-selled.html') ?>"><?= $block->escapeHtml(__('Most sold')) ?></a></li>
 
         </ul>
     </div>
@@ -17,7 +17,7 @@
         </div>
         <ul>
             <li><a href="#"><?= $block->escapeHtml(__('Help')) ?></a></li>
-            <li><a href="#"><?= $block->escapeHtml(__('Shipping')) ?></a></li>
+            <li><a href="<?= $escaper->escapeUrl('http://krysa.magento2.com/customer-service') ?>"><?= $block->escapeHtml(__('Shipping')) ?></a></li>
             <li><a href="#"><?= $block->escapeHtml(__('Affiliate')) ?></a></li>
 
         </ul>
@@ -28,8 +28,8 @@
             <h3 class="title"><?= $block->escapeHtml(__('Info')) ?></h3>
         </div>
         <ul>
-            <li><a href="#"><?= $block->escapeHtml(__('Contact us')) ?></a></li>
-            <li><a href="#"><?= $block->escapeHtml(__('Privacy Policies')) ?></a></li>
+            <li><a href="<?= $escaper->escapeUrl('http://krysa.magento2.com/contact-us') ?>"><?= $block->escapeHtml(__('Contact us')) ?></a></li>
+            <li><a href="<?= $escaper->escapeUrl('http://krysa.magento2.com/privacy-policy-cookie-restriction-mode') ?>"><?= $block->escapeHtml(__('Privacy Policies')) ?></a></li>
             <li><a href="#"><?= $block->escapeHtml(__('Terms & Conditions')) ?></a></li>
 
         </ul>

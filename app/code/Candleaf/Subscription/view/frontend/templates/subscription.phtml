@@ -1,0 +1,33 @@
+<form action="" id="subscribe-product">
+    <fieldset>
+        <div class="field">
+        <input type="radio" id="one-time" class="choice" name="subscribe" value="one-time">
+        <label for="one-time"><?php echo $escaper->escapeHtml(__('One time purchase')) ?></label>
+        </div>
+        <div class="field selected">
+        <input type="radio" id="regular" class="choice" name="subscribe" value="regular" checked="checked">
+        <label for="regular"> <?php echo $escaper->escapeHtml(__('Subscribe and deliver every')) ?></label>
+        <select id="weeks" name="frequency">
+            <option value="1"><?php echo $escaper->escapeHtml(__('1 week')) ?></option>
+            <option value="2"><?php echo $escaper->escapeHtml(__('2 weeks')) ?></option>
+            <option value="3"><?php echo $escaper->escapeHtml(__('3 weeks')) ?></option>
+            <option value="4"><?php echo $escaper->escapeHtml(__('4 weeks')) ?></option>
+        </select>
+        <p class="details">
+            <?php echo $escaper->escapeHtml(__('Subscribe now and get the 10% of discount on every recurring order.  The discount will be applied at checkout.
+')) ?>
+            <a href="#"><?php echo $escaper->escapeHtml(__('See details')) ?></a>
+        </p>
+        </div>
+    </fieldset>
+</form>
+
+<script type="text/x-magento-init">
+    {
+        "#subscribe-product": {
+            "Candleaf_Subscription/js/subscribe-product": {}
+        }
+    }
+</script>
+
+

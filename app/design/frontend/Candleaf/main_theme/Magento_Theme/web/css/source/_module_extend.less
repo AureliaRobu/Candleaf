@@ -185,6 +185,7 @@ Learn more section
         }
         ul {
             list-style: none;
+            padding: 0;
             .checkbox{
                 display: inline-block;
                 margin-right: 1rem;
@@ -204,6 +205,9 @@ Learn more section
 //Desktop
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m){
+    .learn-more{
+        padding: 9rem 2rem;
+    }
     .learn-more-container{
         align-items: flex-start;
         position: relative;
@@ -211,6 +215,21 @@ Learn more section
             position: absolute;
             top: 0;
             right: 0;
+            transform: translateY(-25%);
+            max-width: 50%;
+        }
+        .learn-more-heading{
+            max-width: 50%;
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+        .learn-more-description{
+            max-width: 50%;
+            text-align: left;
+        }
+        .learn-more-list{
+            max-width: 50%;
+
         }
     }
 }
@@ -221,13 +240,16 @@ Testimonials section
 
 & when (@media-common = true) {
     .testimonials {
-        background-color: rgba(86, 178, 128, 0.1);
+        align-items: center;
+        justify-content: center;
+        background-color: @color-white-greenish;
          h1{
             color: @color-gray-dark2;
              margin-bottom: 1.5rem;
         }
         .description{
             color:@color-gray-dark4;
+            margin-bottom: 3rem;
         }
 
         .pagebuilder-column.testimonial.slick-slide {
@@ -261,6 +283,24 @@ Testimonials section
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m){
     .testimonials{
         padding: 9rem 1.5rem 12rem 1.5rem;
+    }
+}
+
+//Desktop
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m){
+    .testimonials{
+       padding: 9rem 2rem 9rem 2rem;
+        .slick-slider{
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+       .testimonial{
+           margin-right: 3rem;
+           &:last-child{
+               margin-right: 0;
+           }
+       }
     }
 }
 

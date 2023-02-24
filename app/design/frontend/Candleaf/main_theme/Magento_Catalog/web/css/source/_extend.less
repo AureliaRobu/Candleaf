@@ -1,0 +1,126 @@
+//Variables
+@product-grid-items-per-row-layout-default: 1;
+
+@product-grid-items-per-row-layout-1-screen-s: 2;
+@product-grid-items-per-row-layout-1-screen-m: 3;
+@product-grid-items-per-row-layout-1-screen-l: 4;
+
+@product-grid-items-per-row-layout-2-right-screen-s: 1;
+@product-grid-items-per-row-layout-2-right-screen-m: 2;
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    .product-add p {
+        color: @theme__color__primary;
+    }
+
+    .product-info-main {
+        .page-title-wrapper {
+            .page-title {
+                font-size: @h2__font-size;
+                line-height: 5.8rem;
+                letter-spacing: -0.9px;
+
+                &::after {
+                    content: 'Candleaf®';
+                }
+            }
+        }
+
+        .field.qty {
+            width: 75px;
+            label{
+               .lib-font-size(18);
+            }
+            .control {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 75px;
+                height: 30px;
+                border: 1px solid @form-element-input__border-color;
+                padding: 0.3rem 0.7rem;
+                .lib-font-size(18);
+                .quantity-plus{
+                    color: @theme__color__primary;
+                }
+
+                input {
+                    .lib-form-element-input(@_type: input-text);
+                    border: none;
+                    .lib-font-size(18);
+                }
+            }
+        }
+
+        .action.primary.tocart {
+            .lib-button(
+                @_button-icon-use: true,
+                @_button-font-content: @icon-cart-button,
+                @_button-icon-font-position: before
+            );
+            .lib-button-primary();
+
+
+        }
+
+        .price-box {
+            margin: 4rem 0;
+            .price-wrapper .price {
+                .lib-font-size(26);
+                font-weight: @font-weight__semibold;
+                color: @theme__color__primary;
+            }
+
+        }
+
+    }
+
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m){
+    .column.main {
+        position: relative;
+
+        .page-title-wrapper {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            display: flex;
+            justify-content: center;
+            width: 345px;
+            transform: translateX(-50%);
+
+        }
+
+        .product-add {
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+        }
+
+        .field.qty{
+            position: absolute;
+            top: 100vmin;
+            right: 9rem;
+        }
+
+
+    }
+
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m){
+
+}
